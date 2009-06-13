@@ -1,0 +1,25 @@
+body
+{
+  font-family: tahoma, sans-serif;
+  font-size: 18px;
+  background-color: #4B7399;
+  width: 100%;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}
+
+#content
+{
+  width: 800px;
+  margin: 0 auto; 
+  text-align: left;
+}
+
+.post
+{
+  padding: 5px 20px 5px 20px;
+  background-color: #ffffff;
+  margin: 20px 0 20px 0;
+  color: #000000;
+} 

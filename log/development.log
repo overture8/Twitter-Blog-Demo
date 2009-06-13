@@ -1,0 +1,91 @@
+  [4;36;1mSQL (33.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (34.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (276.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5612.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (5568.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (252.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (52.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090613163539)
+  [4;35;1mSQL (1379.0ms)[0m   [0mCREATE TABLE `posts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `message` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (480.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090613163539')[0m
+  [4;35;1mSQL (35.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (34.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (198.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mdescribe `posts`[0m
+  [4;36;1mSQL (39.0ms)[0m   [0;1mSHOW KEYS FROM `posts`[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (35.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPost Columns (71.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (55.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Create (34.0ms)[0m   [0;1mINSERT INTO `posts` (`message`, `updated_at`, `created_at`) VALUES('My first post', '2009-06-13 16:39:34', '2009-06-13 16:39:34')[0m
+  [4;35;1mSQL (36.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (37.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Create (39.0ms)[0m   [0mINSERT INTO `posts` (`message`, `updated_at`, `created_at`) VALUES('Post number two!', '2009-06-13 16:39:42', '2009-06-13 16:39:42')[0m
+  [4;36;1mSQL (38.0ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (34.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-06-13 17:42:27) [GET]
+  [4;36;1mPost Load (35.0ms)[0m   [0;1mSELECT * FROM `posts` ORDER BY created_at DESC[0m
+Rendering posts/index
+Rendered posts/_message_form (3621.0ms)
+  [4;35;1mPost Columns (39.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendered posts/_post (397.0ms)
+Rendered posts/_post (1.0ms)
+Completed in 4111ms (View: 4023, DB: 141) | 200 OK [http://localhost/posts]
+  [4;36;1mSQL (35.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (34.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-06-13 17:46:15) [GET]
+  [4;36;1mPost Load (37.0ms)[0m   [0;1mSELECT * FROM `posts` ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_message_form (5.0ms)
+  [4;35;1mPost Columns (41.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendered posts/_post (46.0ms)
+Rendered posts/_post (1.0ms)
+Completed in 134ms (View: 46, DB: 147) | 200 OK [http://localhost/posts]
+  [4;36;1mSQL (33.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (35.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-06-13 18:10:23) [GET]
+  [4;36;1mPost Load (36.0ms)[0m   [0;1mSELECT * FROM `posts` ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_message_form (2.0ms)
+  [4;35;1mPost Columns (42.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendered posts/_post (51.0ms)
+Rendered posts/_post (1.0ms)
+Completed in 145ms (View: 56, DB: 146) | 200 OK [http://localhost/]
+  [4;36;1mSQL (39.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (37.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-06-13 18:11:03) [GET]
+  [4;36;1mPost Load (58.0ms)[0m   [0;1mSELECT * FROM `posts` ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_message_form (2.0ms)
+  [4;35;1mPost Columns (42.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendered posts/_post (70.0ms)
+Rendered posts/_post (1.0ms)
+Completed in 161ms (View: 48, DB: 176) | 200 OK [http://localhost/]
+  [4;36;1mSQL (33.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (34.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-06-13 18:11:52) [POST]
+  Parameters: {"message"=>"Another", "commit"=>"Update", "authenticity_token"=>"jCzDBlKcKs/4QLOSzCZzmFUMe31c45hHuyj/O1gHPko="}
+  [4;36;1mPost Columns (38.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Create (35.0ms)[0m   [0;1mINSERT INTO `posts` (`message`, `updated_at`, `created_at`) VALUES('Another', '2009-06-13 17:11:53', '2009-06-13 17:11:53')[0m
+  [4;35;1mSQL (34.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (35.0ms)[0m   [0mCOMMIT[0m
+Rendering posts/create
+Rendered posts/_post (7.0ms)
+Completed in 632ms (View: 282, DB: 274) | 200 OK [http://localhost/posts]

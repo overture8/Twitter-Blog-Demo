@@ -1,0 +1,2 @@
+page.insert_html :top, :posts, :partial => @post
+page[@post].visual_effect :highlight
