@@ -21,7 +21,7 @@ development:
   database: dablog_development
   pool: 5
   username: root
-  password: 
+  password: novacane
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -34,7 +34,7 @@ test:
   database: dablog_test
   pool: 5
   username: root
-  password:
+  password: 
   host: localhost
 
 production:

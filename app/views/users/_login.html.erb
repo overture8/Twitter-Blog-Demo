@@ -1,0 +1,7 @@
+<% if logged_in? %>
+Welcome <%= current_user.username %>! Not you?
+<%= link_to "Log out", logout_path %>
+<% else %>
+<%= link_to "Sign up", signup_path %> or
+<%= link_to "log in", login_path %>.
+<% end %>
